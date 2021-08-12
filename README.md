@@ -3,6 +3,7 @@ This Terraform module deploys Virtual Machine in Azure. This module requires a n
 This terraform module deploy a linux server and output that vm id.
 
 ## Usage
+This module contains 3 modules. One for resource group, second for network and third for creating a virtual machine.
 ```
 provider "azurerm" {
   features {}
@@ -12,10 +13,6 @@ source = "./module/rg"
 resource_group ="${var.resource_group}"
 location = "eastus"
 }
-
-
-
-
 module "network"{
 source = "./module/network"
 resource_group_name = module.rg.resource_group_name1

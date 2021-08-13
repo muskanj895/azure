@@ -20,7 +20,7 @@ resource "azurerm_network_security_group" "tamopsnsg" {
 }
 
 resource "azurerm_network_security_rule" "testrules" {
-  for_each                    = local.nsgrules
+  for_each                    = "${var.security_rule}"
   name                        = each.key
   direction                   = each.value.direction
   access                      = each.value.access

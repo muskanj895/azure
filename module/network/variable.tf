@@ -10,3 +10,5 @@ variable "address_space" {
  }
 variable "subnet_prefix" {
 }
+variable "security_rule" {
+}

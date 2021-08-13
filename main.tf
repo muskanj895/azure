@@ -14,6 +14,7 @@ vnet = "${var.vnet}"
 subnet_name = "${var.subnet_name}"
 address_space ="${var.address_space}"
 subnet_prefix = "${var.subnet_prefix}"
+security_rule = local.nsgrules
 }
 module "vm" {
 source = "./module/vm"
